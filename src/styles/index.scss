@@ -1,0 +1,438 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './common.scss';
+@import '../iconFonts/iconfont.css';
+@import '../aliiconfonts/iconfont.css';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-right:0 !important;
+  padding-left:0 !important;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+.mt10{
+  margin-top:10px;
+}
+.mt20{
+  margin-top:20px;
+}
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: #eef1f6;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 999 !important;
+}
+.el-submenu__title,.el-submenu .el-menu-item  {
+    height:50px;
+    line-height:50px;
+}
+.el-submenu .el-menu-item{
+    width:auto;
+    min-width: 0;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    color: white !important;
+  &:hover {
+    background-color: $focusMenuColor;
+  }
+  &.is-active {
+    border-left: 4px solid #fff;
+    width: 180px !important;
+    background-color: $focusMenuColor;
+    padding-left: 36px !important;
+  }
+}
+.el-menu .el-menu-item{
+  width:auto;
+  min-width: 0;
+  height: 36px;
+  line-height: 36px;
+  color: white !important;
+&:hover {
+  background-color: $focusMenuColor;
+}
+&.is-active {
+  border-left: 4px solid #fff;
+  width: 180px !important;
+  background-color: $focusMenuColor;
+}
+}
+.el-menu {
+  border: none;
+  background-color: unset;
+}
+
+.el-menu--vertical ul.el-menu--popup {
+  padding: 0;
+  background-color: $customPrimaryColor;
+  li.el-menu-item {
+    color: white !important;
+  }
+  li.el-menu-item.is-active {
+    width: 200px !important;
+    padding: 0 20px !important;
+    border: none !important;
+  }
+  li.el-menu-item:hover {
+    background-color: $focusMenuColor;
+  }
+}
+
+.el-submenu {
+  outline: none !important;
+  position: relative;
+}
+
+.el-submenu.is-opened .el-submenu__title {
+  font-weight: 500;
+  i::before{
+    opacity: 1;
+    font-weight: 500;
+  }
+}
+.el-table th.is-leaf{
+  border-bottom: 1px solid #dfe6ec;
+}
+.el-table--border th, .el-table--border td {
+  border-right: 1px solid #dfe6ec;
+}
+.el-table__header th{
+  padding: 8px 0px;
+}
+.el-table__row td{
+   border-bottom: 1px rgb(241, 241, 241) solid;
+   padding: 5px 0px;
+   text-align: center;
+}
+.el-table .el-table__cell{
+  text-align: center;
+  div{
+    word-break: keep-all;
+
+  }
+}
+.el-menu-item {
+  color: white !important;
+  &:hover, &:focus {
+    background-color: $focusMenuColor;
+  }
+  i {
+    opacity: 0.65;
+    color: white;
+  }
+  &.is-active {
+    i {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.el-submenu__title {
+  i {
+    color: white;
+    &:before {
+      opacity: 0.65;
+    }
+  }
+  span {
+    color: white;
+  }
+  &:hover {
+    background-color: $focusMenuColor;
+  }
+}
+
+.second-wrapper>div>li.el-menu-item {
+  height: 36px;
+  line-height: 36px;
+}
+
+.el-menu--collapse .el-menu-item span {
+  display: none;
+}
+
+.no-bottom-border .flex-wrapper {
+  border-bottom: none !important;
+}
+.el-table--border {
+  border-bottom:1px solid #e6ebf5
+}
+@font-face {
+  font-family: fzkt;
+  src: url('../assets/element-theme/fonts/fzkt.ttf')
+}
+
+@font-face {
+  font-family: fzktpy01;
+  src: url('../assets/element-theme/fonts/fzktpy01.ttf')
+}
+
+@font-face {
+  font-family: fzktpy02;
+  src: url('../assets/element-theme/fonts/fzktpy02.ttf')
+}
+
+@font-face {
+  font-family: fzktpy03;
+  src: url('../assets/element-theme/fonts/fzktpy03.ttf')
+}
+
+@font-face {
+  font-family: fzktpy04;
+  src: url('../assets/element-theme/fonts/fzktpy04.ttf')
+}
+
+@font-face {
+  font-family: fzktpy05;
+  src: url('../assets/element-theme/fonts/fzktpy05.ttf')
+}
+
+@font-face {
+  font-family: fzktpy06;
+  src: url('../assets/element-theme/fonts/fzktpy06.ttf')
+}
+
+@font-face {
+  font-family: simhei;
+  src: url('../assets/element-theme/fonts/SIMHEI.ttf')
+}
+
+@font-face {
+  font-family: lingoaceFzy;
+  src: url('../assets/fonts/FZY3JW1.ttf')
+}
+@font-face {
+  font-family: lingoaceFzyWeight;
+  src: url('../assets/fonts/FZY4JW1.ttf')
+}
+
+@font-face {
+  font-family: SofiaProSoftMedium;
+  src: url('../assets/fonts/Mostardesign - Sofia Pro Soft Medium.otf')
+}
+
+@font-face {
+  font-family: SofiaProUltraLight;
+  src: url('../assets/fonts/Mostardesign - Sofia Pro Soft Light.otf')
+}
+
+.w-e-text {
+  font-size: 28px;
+  padding-top: 10px !important;
+}
+
+.fzkt {
+  font-family: fzkt;
+}
+
+.fzktpy01 {
+  font-family: fzktpy01;
+}
+
+.fzktpy02 {
+  font-family: fzktpy02;
+}
+
+.fzktpy03 {
+  font-family: fzktpy03;
+}
+
+.fzktpy04 {
+  font-family: fzktpy04;
+}
+
+.fzktpy05 {
+  font-family: fzktpy05;
+}
+
+.fzktpy06 {
+  font-family: fzktpy06;
+}
+
+.simhei {
+  font-family: simhei;
+}
+
+.page-title {
+  padding: 20px 0px;
+  font-weight: 1000;
+}

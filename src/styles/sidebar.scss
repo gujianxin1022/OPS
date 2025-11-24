@@ -1,0 +1,92 @@
+#app {
+  min-width: 300px;
+  height: 100%;
+  .app-wrapper {
+    position: relative;
+    // height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    .drawer-bg {
+      background: #000;
+      opacity: 0.3;
+      width: 100%;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      z-index: 100;
+    }
+    // 主体区域
+    .main-container {
+      margin-left: 180px;
+      transition: margin-left .28s;
+      position: relative;
+    }
+    // 侧边栏
+    .sidebar-container {
+      transition: width 0.28s;
+      width: 180px !important;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      // font-size: 0px;
+      height: 100%;
+      overflow-x: auto;
+      top: 0;
+      .scrollbar-wrapper {
+        overflow-x: hidden!important;
+        .el-scrollbar__view {
+          height: 100%;
+        }
+      }
+      .is-horizontal {
+        display: none;
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+      }
+      .svg-icon {
+        margin-right: 16px;
+      }
+    }
+    &.mobile.openSidebar{
+      position: fixed;
+      top: 0;
+    }
+    &.hideSidebar {
+      .main-container {
+        margin-left: 60px;
+      }
+      .sidebar-container {
+        width: 60px !important;
+      }
+    }
+    //适配移动端
+    &.mobile {
+      .main-container {
+        margin-left: 0;
+      }
+      .sidebar-container {
+        transition: all .28s;
+        width: 230px!important;
+      }
+      &.hideSidebar {
+        .sidebar-container {
+          width: 0!important;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  }
+
+
+
+  // 没有动画
+  .withoutAnimation {
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+}

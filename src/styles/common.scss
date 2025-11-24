@@ -1,0 +1,390 @@
+/*常用间距*/
+.m5{margin:5px!important;}
+.m6{margin:6px!important;}
+.m10{margin:10px!important;}
+.m15{margin:15px!important;}
+.m20{margin:20px!important;}
+.m30{margin:30px!important;}
+.mt5{margin-top:5px;}
+.mt6{margin-top:6px;}
+.mt10{margin-top:10px!important;}
+.mt15{margin-top:15px!important;}
+.mt20{margin-top:20px!important;}
+.mt30{margin-top:30px!important;}
+.mt50{margin-top:50px!important;}
+.mt100{margin-top:100px!important;}
+.mb5{margin-bottom:5px!important;}
+.mb10{margin-bottom:10px!important;}
+.mb15{margin-bottom:15px!important;}
+.mb20{margin-bottom:20px!important;}
+.mb25{margin-bottom:25px!important;}
+.mb30{margin-bottom:30px!important;}
+.mb50{margin-bottom:50px!important;}
+.ml5{margin-left:5px!important;}
+.ml10{margin-left:10px!important;}
+.ml15{margin-left:15px!important;}
+.ml20{margin-left:20px!important;}
+.ml30{margin-left:30px!important;}
+.ml50{margin-left:50px!important;}
+.ml60{margin-left:60px!important;}
+.ml70{margin-left:70px!important;}
+.ml80{margin-left:80px!important;}
+.ml90{margin-left:90px!important;}
+.mr5{margin-right:5px!important;}
+.mr10{margin-right:10px!important;}
+.mr15{margin-right:15px!important;}
+.mr20{margin-right:20px!important;}
+.mr30{margin-right:30px!important;}
+.mr50{margin-right:50px!important;}
+.mr85{margin-right:85px!important;}
+.p5{padding:5px!important;}
+.p10{padding:10px!important;}
+.p15{padding:15px!important;}
+.p20{padding:20px!important;}
+.p30{padding:30px!important;}
+.p40{padding:40px!important;}
+.p50{padding:50px!important;}
+.pt5{padding-top:5px!important;}
+.pt10{padding-top:10px!important;}
+.pt15{padding-top:15px!important;}
+.pt20{padding-top:20px!important;}
+.pt30{padding-top:30px!important;}
+.pt40{padding-top:40px!important;}
+.pt50{padding-top:50px!important;}
+.pt60{padding-top:60px!important;}
+.pb5{padding-bottom:5px!important;}
+.pb10{padding-bottom:10px!important;}
+.pb15{padding-bottom:15px!important;}
+.pb20{padding-bottom:20px!important;}
+.pb30{padding-bottom:30px!important;}
+.pb50{padding-bottom:50px!important;}
+.pl5{padding-left:5px!important;}
+.pl10{padding-left:10px!important;}
+.pl15{padding-left:15px!important;}
+.pl20{padding-left:20px!important;}
+.pl30{padding-left:30px!important;}
+.pl50{padding-left:50px!important;}
+.pl90{padding-left:90px!important;}
+.pr5{padding-right:5px!important;}
+.pr10{padding-right:10px!important;}
+.pr15{padding-right:15px!important;}
+.pr20{padding-right:20px!important;}
+
+
+.w50{width:50px!important;}
+.w60{width:60px!important;}
+.w70{width:70px!important;}
+.w80{width:80px!important;}
+.w100{width:100px!important;}
+.w120{width:120px!important;}
+.w130{width:130px!important;}
+.w150{width:150px!important;}
+.w160{width:160px!important;}
+.w200{width:200px!important;}
+.w300{width:300px!important;}
+.w330{width:330px!important;}
+.w340{width:340px!important;}
+.w500{width:500px!important;}
+
+// 最小宽度
+.minW100 {min-width: 100px;}
+// 最大宽度
+.maxW150 {max-width: 150px;}
+
+.wp{width:100%}
+.hp{height:100%}
+// 浮动
+.fl{float:left;}
+.fr{float:right;}
+
+/*对齐*/
+.tc{text-align:center;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+/* word-break */
+.wbn{word-break:keep-all;white-space:nowrap;}
+.wby{word-break:break-all;word-wrap:break-word;white-space:normal;}
+
+.hidden{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.pointer{cursor:pointer;}
+
+/* 超出隐藏 */
+.vhidden{visibility:hidden;}
+.ohidden{overflow:hidden;}
+.oauto{overflow:auto;}
+/*单行文本...*/
+.thidden{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+/*多行文本...*/
+.thidden-more{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
+.none{display:none!important;}
+
+/* table hover 不生效解决 */
+.el-table__body .hover-row,tr:hover > td{
+  background: #f5f7fa !important;
+}
+
+/* table 拆分单元格样式 */
+.split-cell{
+  .cell{
+    padding: 0;
+    color: red;
+    div{
+      border-bottom: 1px solid #dfe6ec;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    div:last-child{
+      border: none;
+    }
+  }
+}
+
+
+/* 左浮动 */
+
+.left {
+  float: left;
+}
+
+/* 有浮动 */
+
+.right {
+  float: right;
+}
+
+/* 清除浮动 */
+
+.clear-fix:after {
+  content: ' ';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/*************显示隐藏*************/
+
+/* 显示 */
+
+.show {
+  display: block;
+}
+
+/* 隐藏 */
+
+.hide {
+  display: none;
+}
+
+/*************盒子类型*************/
+
+/* block */
+
+.block {
+  display: block;
+}
+
+/* inline */
+
+.inline {
+  display: inline;
+}
+
+/* inline-block */
+
+.inline-block {
+  display: inline-block;
+}
+
+/************** flex布局 **************/
+
+/* 父元素 */
+
+.flex-wrapper {
+  display: flex;
+}
+
+/* 换行 */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* 子元素 */
+
+.flex-item {
+  flex: 1;
+}
+
+/* 顺序从上到下 */
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+/* 顺序从左到右 */
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+/* 横向居中 */
+
+.flex-row-center {
+  justify-content: center;
+}
+
+/* 纵向居中 */
+
+.flex-column-center {
+  align-items: center;
+}
+
+/* 横向两边对齐，并且第一个元素前和最后一个元素后不留空白 */
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+/* 横向两边对齐，并且第一个元素前和最后一个元素后留有空白 */
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+/**************文字位置**************/
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.overflowView{
+  overflow: hidden;
+}
+
+/**************文字溢出省略号**************/
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**************文字2行溢出省略号**************/
+
+.text-overflowTow {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  /* -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+}
+
+/**************文字溢出自动换行**************/
+
+.text-wrap {
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+/**************盒模型**************/
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.hide {
+  display: none;
+}
+/* 禁止复制 */
+.user-select-no {
+  user-select: none;
+}
+
+/* 添加悬浮小手标志 */
+.pointer {
+  cursor: pointer;
+}
+
+// 边距
+.padding20 {
+  padding: 20px;
+}
+
+// 上边距
+.marginTp20 {
+  margin-top: 20px;
+}
+
+// 多行布局中的两行布局，同意表单元素的样式
+.two-line-form {
+  .el-input {
+    max-width: 400px;
+  }
+   .el-date-editor.el-input, .el-date-editor.el-input__inner {
+    width: 100%!important;
+    max-width: 400px!important;
+  }
+  .el-cascader.el-cascader--small {
+    width: 100%!important;
+    max-width: 400px!important;
+  }
+}
+
+// 一行显示的form表单
+.form-one-line{
+  .el-form-item{display: inline-block;}
+}
+.c-custom-label{float:left;font-size:14px;line-height:32px;padding:0 12px 0 0;text-align:right;color:#606266;width:140px;font-weight:700;}
+.m-scroll-height .el-dialog__body{height:460px;}
+.m-create-class{
+  .el-dialog__body{
+    height: 400px;
+    overflow: auto;
+  }
+}
+.m-footer-btm{
+  .el-dialog__body{
+    padding-bottom: 80px;
+  }
+  .dialog-footer{
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    background: #fff;
+    box-sizing:border-box;
+    left: 0;
+  }
+}
+.nodata{
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+  line-height: 100px;
+}
+
+// 主题色表头
+.my-theme-color-header{
+  background: #7E8AE7 !important;
+  color: #fff !important;
+  .cell{
+    word-break: keep-all;
+  }
+}

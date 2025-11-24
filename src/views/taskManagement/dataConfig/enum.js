@@ -1,0 +1,53 @@
+/* 包含状态 */
+export const CONDITION_STATUS = {
+  CONTAINE: "IN",
+  EXCLUDE: "NOTIN",
+};
+
+/* 用户基本属性 */
+export const BASE_CONDITION_TYPE = {
+  COURSE_TYPE: "COURSE_TYPE" /*课程类型 */,
+  COURSE_PACKAGE_ID: "COURSE_PACKAGE_ID" /*课包Id */,
+  CLASS_TYPE: "CLASS_TYPE" /* 上课类型 */,
+  SUBJECT_ID: "SUBJECT_ID" /* 学科id */,
+  PACKAGE_TREE: "PACKAGE_TREE" /* 版本 */,
+  PAYMENT_TYPE: "PAYMENT_TYPE" /* 付费方式 */,
+  PARENT_LTO_LABEL: "PARENT_LTO_LABEL" /* 家长LTO标签 */,
+};
+
+/* 用户行为属性 */
+export const BEHAVIOR_CONDITION_TYPE = {
+  LAST_TASK_CREATION_DAYS: "LAST_TASK_CREATION_DAYS" /*最后任务创建天数 */,
+  LAST_NORMAL_CLASS_COMPLETION_DAYS:
+    "LAST_NORMAL_CLASS_COMPLETION_DAYS" /*最近正常完课距今天数 */,
+  CLASS_SCHEDULED_THIS_MONTH_NUM:
+    "CLASS_SCHEDULED_THIS_MONTH_NUM" /* 本月约课数 */,
+  CLASS_SCHEDULED_THIS_WEEK_NUM:
+    "CLASS_SCHEDULED_THIS_WEEK_NUM" /* 本周约课数 */,
+  CLASS_COMPLETED_LAST_MONTH_NUM:
+    "CLASS_COMPLETED_LAST_MONTH_NUM" /* 上月完课数 */,
+  CLASS_COMPLETED_LAST_WEEK_NUM:
+    "CLASS_COMPLETED_LAST_WEEK_NUM" /* 上周完课数 */,
+  PUNCH_IN_THIS_WEEK_NUM: "PUNCH_IN_THIS_WEEK_NUM" /* 本周打卡成功数 */,
+  PUNCH_IN_THIS_MONTH_NUM: "PUNCH_IN_THIS_MONTH_NUM" /* 本月打卡成功数 */,
+  COIN_BALANCE: "COIN_BALANCE" /* 积分数量 */,
+  ACCOUNT_BALANCE: "ACCOUNT_BALANCE" /* 课时数量 */,
+  LAST_ORDER_DAYS_FROM_NOW:
+    "LAST_ORDER_DAYS_FROM_NOW" /* 最近订单距离今天的天数 */,
+  FIRST_SINGLE_CYCLE: "FIRST_SINGLE_CYCLE" /* 付费周期M(x) */,
+};
+/* 任务对象 */
+export const TASK_TARGET_PARENT = 1;
+export const TASK_TARGET_STUDENT = 2;
+export const TASK_TARGET_PLAN = 3;
+
+/* 事件类型 */
+export const FINISH_CLASS_NORMALLY = 1; //正常完课
+export const FINISH_CLASS_ABNORMAL = 2; //异常完课
+export const CIRCULATION_BEHAVIOR = 3; //流转行为
+export const LEARNING_STATUS_BOARD = 4; //学情看板
+export const CHANGE_SALES_OWNERSHIP = 5; //学情看板
+
+/* 循环时间跨度 */
+export const TIME_SPAN_WEEKS = 1; //周
+export const TIME_SPAN_MOUNTH = 2; //月

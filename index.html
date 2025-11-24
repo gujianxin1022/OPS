@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <link rel="shortcut icon" href="https://cdn.lingo-ace.com/common/favicon.ico">
+    <title>教学管理系统</title>
+    <script src="https://stage.cdn.lingoace.com/referral/20210816/1433343626.js"></script>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.13/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.13/aliplayer-min.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but project-tms-admin doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.10/vue.js"></script> -->
+    
+    <script src="https://cdn.lingo-ace.com/common/vue@2.6.10.js" charset="utf-8"></script>
+    <script src="https://cdn.lingo-ace.com/common/element-ui@2.15.14.js" charset="utf-8"></script>
+    <script src="https://cdn.lingo-ace.com/public/js/twilio-chat@4.0.0.min.js"></script>
+    <script>
+      //获取用户信息
+      const loginInfo = localStorage.getItem('userInfo')
+      const userInfo = JSON.parse(loginInfo)
+      function generateUUID() {
+          return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+              (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+          );
+      }
+      window.difyChatbotConfig = {
+       token: 'eELeDqdmvlLIAiZ0',
+       baseUrl: 'https://dify.lingoace.com',
+       isDev: false,
+       containerProps:{
+        className: 'dify-chatbot-bubble-button-custom my-custom-class',
+       },
+       inputs: {
+         user_id: userInfo.id,
+         conversation_id: '',
+         time_zone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+         // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+       },
+       userVariables: {
+          avatar_url: userInfo.avatar||'https://cdn.lingoace.com/referral/20250722/1437787323.png',
+         // name: 'YOU CAN DEFINE USER NAME HERE',
+       },
+       systemVariables: {
+          user_id: `${userInfo.username}-${userInfo.id}-${new Date().getTime().toString().slice(-6)}`,
+          time_zone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          
+       },
+       draggable:true,
+      dragAxis: 'both', 
+      }
+     </script>
+     <script
+      src="https://dify.lingoace.com/embed.min.js"
+      id="eELeDqdmvlLIAiZ0"
+      defer>
+     </script>
+     <style>
+       #dify-chatbot-bubble-button {
+         background-color: transparent !important;
+         width: 177px !important;
+         height: 231px !important;
+         transform: scale(0.3) !important;
+         box-shadow: none !important;
+       }
+       /* #dify-chatbot-bubble-window {
+         width: 24rem !important;
+         height: 40rem !important;
+       } */
+       .dify-chatbot-bubble-button-custom div{
+        background-image: url('https://cdn.lingoace.com/referral/20250722/1144758690.gif') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+       }
+       .dify-chatbot-bubble-button-custom div svg{
+        display: none !important;
+       }
+       #dify-chatbot-bubble-window {
+       position: fixed !important;
+       right: 24px !important;
+       bottom: 24px !important;
+       z-index: 9999 !important;
+     }
+     </style>
+  </body>
+</html>

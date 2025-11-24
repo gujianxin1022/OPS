@@ -1,0 +1,9 @@
+@mixin font-style ($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin bg-img($imgUrl) {
+  background: url($imgUrl) no-repeat;
+  background-size: 100% 100%;
+}
